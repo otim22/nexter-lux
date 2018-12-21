@@ -8,6 +8,11 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 6rem;
     align-items: start;
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 8rem 0;
+        grid-gap: 4rem;
+    }
 }
 
 .feature {
@@ -16,12 +21,23 @@
     grid-row-gap: 1.5rem;
     grid-column-gap: 2.5rem;
 
+    @media only screen and (max-width: $bp-small) {
+        grid-row-gap: .5rem;
+        grid-column-gap: 1.5rem;
+    }
+
     &__icon {
         fill: $color-primary;
         width: 4.5rem;
         height: 4.5rem;
         grid-row: 1 / span 2;
         transform: translateY(-1rem);
+
+        @media only screen and (max-width: $bp-small) {
+            width: 3rem;
+            height: 3rem;
+            transform: translateY(-.4rem);
+        }
     }
 
     &__text {
